@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NPC</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .container h2 {
+            text-align: center;
+        }
+
+        select,
+        input[type="number"],
+        input[type="submit"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        button,
+        .back-btn {
+            display: block;
+            margin: 20px auto;
+            width: 50%;
+            padding: 10px;
+            background-color: #8000FF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover,
+        .back-btn:hover {
+            background-color: #4B0082;
+        }
+
+        .container h1 {
+            text-align: center;
+        }
+
+        body {
+            background-image: url('materials/add2.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Выбор NPC</h1>
+        <label for="item">Выберите NPC:</label>
+        <select id="item" name="item">
+            <option value="1">Медведь</option>
+            <option value="2">Собака</option>
+            <option value="3">Динозавр</option>
+            <option value="4">Лягушка</option>
+            <option value="5">Бандит</option>
+        </select>
+        <label for="number1">Координаты X:</label>
+        <input type="number" id="number1" name="number1">
+        <label for="number2">Координаты Y:</label>
+        <input type="number" id="number2" name="number2">
+        <button type="button" onclick="addNPC()">Добавить</button>
+        <a href="game.html" class="back-btn">Назад</a>
+    </div>
+</body>
+
+</html>

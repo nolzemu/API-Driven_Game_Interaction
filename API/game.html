@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            background-image: url('materials/game.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        header {
+            background-color: #252F48;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 999;
+            /* устанавливаем z-index, чтобы шапка была поверх других элементов */
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: bold;
+            color: #EDB749;
+        }
+
+        header img {
+            width: 50px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .table_dark {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+            font-size: 18px;
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+            background: #252F48;
+            margin: 90px 10px 10px 10px;
+            /* добавляем отступ вверху */
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .table_dark th {
+            color: #EDB749;
+            border-bottom: 1px solid #37B5A5;
+            padding: 12px 17px;
+            background-color: #1A1F2C;
+        }
+
+        .table_dark td {
+            color: #CAD4D6;
+            border-bottom: 1px solid #37B5A5;
+            border-right: 1px solid #37B5A5;
+            padding: 7px 17px;
+        }
+
+        .table_dark tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table_dark td:last-child {
+            border-right: none;
+        }
+
+        .table_dark tr:hover td {
+            background-color: #344259;
+            transition: background-color 0.3s ease;
+        }
+
+        .delete-link {
+            cursor: pointer;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #8000FF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .add-button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            background-color: #4B0082;
+        }
+
+        footer {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #252F48;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body onload="load()">
+    <header>
+        <img src="materials/knight1.png" alt="Логотип" style="margin-right: 10px;">
+        <h1>Тень Рыцаря: Зов Древних Сокровищ</h1>
+        <img src="materials/knight2.png" alt="Логотип" style="margin-left: 10px;">
+        <span id="userGreeting"></span>
+    </header>
+    <table class="table_dark">
+        <thead>
+            <tr>
+                <th>Тип</th>
+                <th>Х</th>
+                <th>Y</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbl_body"></tbody>
+    </table>
+    <div class="add-button-container">
+        <a href="add.html">Добавить</a>
+    </div>
+
+    <footer class="footer">
+        <div>
+            Игровой сайт © Все права защищены 2024
+        </div>
+        <div>
+            <img src="materials/vk.png" alt="vk" style="width: 60px; margin: 0 10px;">
+            <img src="materials/discord.png" alt="discord" style="width: 60px; margin: 0 10px;">
+            <img src="materials/reddit.png" alt="reddit" style="width: 60px; margin: 0 10px;">
+        </div>
+        <div>
+            Свяжитесь с нами: shadowknight@box.com | +9999999999
+        </div>
+    </footer>
+
+</body>
+
+</html>

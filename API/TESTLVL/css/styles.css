@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.draggable_from_panel,
+.draggable_by_scene {
+    height: 20px;
+    margin: 20px;
+    float: left;
+}
+
+#npc_list {
+    width: 100%;
+    height: 80px;
+}
+
+#scene {
+    width: 1700px;
+    height: 260px;
+    background-image: url('../img/scene_part1.png');
+    background-repeat: no-repeat;
+}
+
+#npc_list>div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

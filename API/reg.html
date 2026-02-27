@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('materials/reg.jpg');
+            background-size: cover;
+            background-position: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: calc(100% - 40px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 200px;
+            padding: 10px;
+            background-color: #8000FF;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            /* Добавляем переход для цвета */
+        }
+
+        button:hover {
+            background-color: #4B0082;
+            /* Изменяем цвет при наведении */
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 14px;
+        }
+
+        .message a {
+            color: #8000FF;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Регистрация</h2>
+        <form id="registrationForm">
+            <input id="login" type="text" name="username" placeholder="Имя пользователя" required>
+            <br>
+            <input id="pas" type="password" name="password" placeholder="Пароль" required>
+            <br>
+            <button type="button" onclick="registration()">Зарегистрироваться</button>
+        </form>
+        <p class="message">Уже зарегистрированы? <a href="login.html">Войдите</a></p>
+    </div>
+</body>
+
+</html>
